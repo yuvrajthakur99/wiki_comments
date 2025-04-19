@@ -1,0 +1,11 @@
+CREATE TABLE comments(
+    id SERIAL PRIMARY KEY,
+    article VARCHAR NOT NULL,
+    username VARCHAR NOT NULL,
+    content TEXT NOT NULL,
+    likes INTEGER NOT NULL DEFAULT 0,  
+    dislikes INTEGER NOT NULL DEFAULT 0,
+    edited BOOL DEFAULT FALSE NOT NULL,
+    is_reply BOOL DEFAULT FALSE NOT NULL,
+    reply_to VARCHAR
+);
