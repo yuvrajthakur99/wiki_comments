@@ -2,6 +2,7 @@ use diesel::prelude::*;
 use crate::schema::comments;
 use serde::Deserialize;
 
+#[derive(Debug)]
 #[derive(Queryable, Selectable)]
 #[diesel(table_name = comments)]
 #[diesel(check_for_backend(diesel::pg::Pg))]
